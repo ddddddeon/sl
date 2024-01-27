@@ -11,6 +11,7 @@ def data_diff(field, col):
         diff = round(((today - yesterday) / yesterday) * 100, 2)
         col.metric(label=field, value=today, delta=f"{diff}%", )
 
+st.set_page_config(page_title="Ticker", page_icon=":chart_with_upwards_trend:")        
 st.title("Ticker")
         
 symbol = st.text_input("Ticker symbol", "GOOGL")
